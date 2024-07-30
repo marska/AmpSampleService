@@ -13,6 +13,9 @@ public class FooDbModel
     [Required()]
     public string Id { get; set; }
 
+    [StringLength(1000)]
+    public string? Name { get; set; }
+
     [Required()]
     public DateTime UpdatedAt { get; set; }
 }

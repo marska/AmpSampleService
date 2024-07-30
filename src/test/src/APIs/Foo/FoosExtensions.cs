@@ -11,13 +11,14 @@ public static class FoosExtensions
         {
             CreatedAt = model.CreatedAt,
             Id = model.Id,
+            Name = model.Name,
             UpdatedAt = model.UpdatedAt,
         };
     }
 
     public static FooDbModel ToModel(this FooUpdateInput updateDto, FooWhereUniqueInput uniqueId)
     {
-        var foo = new FooDbModel { Id = uniqueId.Id };
+        var foo = new FooDbModel { Id = uniqueId.Id, Name = updateDto.Name };
 
         if (updateDto.CreatedAt != null)
         {

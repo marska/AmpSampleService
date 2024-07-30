@@ -26,6 +26,7 @@ public abstract class FoosServiceBase : IFoosService
         var foo = new FooDbModel
         {
             CreatedAt = createDto.CreatedAt,
+            Name = createDto.Name,
             UpdatedAt = createDto.UpdatedAt
         };
 
